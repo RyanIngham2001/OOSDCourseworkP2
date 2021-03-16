@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oosdcoursework.Admin">
+   <children>
+      <Label layoutX="38.0" layoutY="14.0" text="Admin Page">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="38.0" layoutY="130.0" prefHeight="88.0" prefWidth="408.0">
+         <children>
+            <TextField fx:id="txtAddTeam" layoutX="26.0" layoutY="44.0" prefHeight="25.0" prefWidth="189.0" promptText="Add a new team" />
+            <Button fx:id="btnAddTeam" layoutX="265.0" layoutY="44.0" mnemonicParsing="false" onAction="#addNewTeam" text="Add Team" />
+            <Label fx:id="lblAddTeamIndicator" layoutX="111.0" layoutY="7.0" prefHeight="27.0" prefWidth="225.0" text="Add a new team">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="38.0" layoutY="261.0" prefHeight="88.0" prefWidth="490.0">
+         <children>
+            <Label fx:id="lblAddPlayerIndicator" layoutX="102.0" layoutY="11.0" prefHeight="27.0" prefWidth="225.0" text="Enter a new player">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtAddPlayer" layoutX="26.0" layoutY="44.0" prefHeight="25.0" prefWidth="189.0" promptText="Add a new player" />
+            <Button fx:id="btnAddPlayer" layoutX="391.0" layoutY="44.0" mnemonicParsing="false" onAction="#addNewPlayer" text="Add player" />
+            <ChoiceBox fx:id="choiceAddPlayersTeam" layoutX="226.0" layoutY="48.0" onMouseClicked="#initTeamsList" prefWidth="150.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="38.0" layoutY="411.0" prefHeight="88.0" prefWidth="490.0">
+         <children>
+            <Label fx:id="lblGenerateFixtures" layoutX="99.0" layoutY="14.0" prefHeight="27.0" prefWidth="225.0" text="Generate match fixtures">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="273.0" layoutY="41.0" mnemonicParsing="false" onAction="#generateFixtures" prefHeight="32.0" prefWidth="79.0" text="Generate" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="38.0" layoutY="559.0" prefHeight="88.0" prefWidth="490.0">
+         <children>
+            <Label fx:id="lblGenerateStats" layoutX="99.0" layoutY="14.0" prefHeight="27.0" prefWidth="299.0" text="Generate team statistics report">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnGenerateStats" layoutX="273.0" layoutY="41.0" mnemonicParsing="false" onAction="#openStatsReport" prefHeight="32.0" prefWidth="79.0" text="Generate" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

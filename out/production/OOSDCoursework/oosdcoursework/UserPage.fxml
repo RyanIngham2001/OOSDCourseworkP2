@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="oosdcoursework.Controller">
+   <children>
+      <TabPane layoutX="2.0" prefHeight="714.0" prefWidth="1200.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Viewer Page">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="0.0" prefWidth="917.0">
+                     <children>
+                        <Button layoutX="1049.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="50.0" prefWidth="137.0" text="Admin Login" />
+                        <Button layoutX="24.0" layoutY="64.0" mnemonicParsing="false" onAction="#viewFixturesAndResults" prefHeight="25.0" prefWidth="147.0" text="View fixtures and results" />
+                        <Button layoutX="24.0" layoutY="185.0" mnemonicParsing="false" onAction="#openStatsReport" prefHeight="25.0" prefWidth="149.0" text="Show all team stats" />
+                        <Button layoutX="25.0" layoutY="309.0" mnemonicParsing="false" onAction="#showTeamRankings" prefHeight="25.0" prefWidth="146.0" text="Show team rankings" />
+                        <Button layoutX="23.0" layoutY="458.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="View match scores" />
+                        <AnchorPane layoutX="624.0" layoutY="222.0" prefHeight="200.0" prefWidth="545.0">
+                           <children>
+                              <Label fx:id="lblTeamRankings" layoutX="37.0" layoutY="28.0" prefHeight="165.0" prefWidth="213.0">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font></Label>
+                              <Label fx:id="lblTeamRankingsIndicator" layoutX="91.0" layoutY="15.0" prefHeight="17.0" prefWidth="251.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="255.0" layoutY="15.0" prefHeight="535.0" prefWidth="464.0">
+                           <children>
+                              <Label fx:id="lblFixturesResults" layoutX="26.0" prefHeight="664.0" prefWidth="378.0">
+                                 <font>
+                                    <Font size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Scoresheet Page">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="1049.0" layoutY="14.0" mnemonicParsing="false" onAction="#showLogin" prefHeight="50.0" prefWidth="137.0" text="Admin Login" />
+                        <Button layoutX="41.0" layoutY="27.0" mnemonicParsing="false" onAction="#showTeamLists" prefHeight="25.0" prefWidth="118.0" text="New Sheet" />
+                        <Button layoutX="189.0" layoutY="27.0" mnemonicParsing="false" onAction="#showPlayerLists" prefHeight="25.0" prefWidth="127.0" text="Confirm Teams" />
+                        <Label layoutX="151.0" layoutY="110.0" text="Home Team">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="chcHomeTeam" layoutX="241.0" layoutY="108.0" onContextMenuRequested="#showTeamLists" prefWidth="150.0" />
+                        <Label layoutX="442.0" layoutY="110.0" text="Away Team">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="chcAwayTeam" layoutX="569.0" layoutY="108.0" onContextMenuRequested="#showPlayerLists" prefWidth="150.0" />
+                        <Label layoutX="125.0" layoutY="235.0" text="Singe Sets">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox fx:id="chcAwayPlayer1" layoutX="241.0" layoutY="217.0" prefHeight="55.0" prefWidth="149.0" />
+                        <ChoiceBox fx:id="chcAwayPlayer2" layoutX="414.0" layoutY="217.0" prefHeight="55.0" prefWidth="149.0" />
+                        <Label layoutX="284.0" layoutY="193.0" text="Away player" />
+                        <Label layoutX="457.0" layoutY="193.0" text="Away player" />
+                        <ChoiceBox fx:id="chcHomePlayer1" layoutX="85.0" layoutY="299.0" prefHeight="55.0" prefWidth="149.0" />
+                        <ChoiceBox fx:id="chcHomePlayer2" layoutX="85.0" layoutY="394.0" prefHeight="55.0" prefWidth="149.0" />
+                        <Label layoutX="119.0" layoutY="272.0" text="Home player" />
+                        <Label layoutX="119.0" layoutY="375.0" text="Home player" />
+                        <TextField fx:id="txtHome1Away1_1" layoutX="241.0" layoutY="291.0" />
+                        <TextField fx:id="txtHome1Away1_2" layoutX="241.0" layoutY="318.0" />
+                        <TextField fx:id="txtHome1Away1_3" layoutX="241.0" layoutY="346.0" />
+                        <TextField fx:id="txtHome1Away2_1" layoutX="415.0" layoutY="291.0" />
+                        <TextField fx:id="txtHome1Away2_2" layoutX="414.0" layoutY="318.0" />
+                        <TextField fx:id="txtHome1Away2_3" layoutX="415.0" layoutY="346.0" />
+                        <TextField fx:id="txtHome2Away1_1" layoutX="241.0" layoutY="382.0" />
+                        <TextField fx:id="txtHome2Away1_2" layoutX="241.0" layoutY="409.0" />
+                        <TextField fx:id="txtHome2Away1_3" layoutX="241.0" layoutY="437.0" />
+                        <TextField fx:id="txtHome2Away2_1" layoutX="415.0" layoutY="382.0" />
+                        <TextField fx:id="txtHome2Away2_2" layoutX="414.0" layoutY="409.0" />
+                        <TextField fx:id="txtHome2Away2_3" layoutX="415.0" layoutY="437.0" />
+                        <Label layoutX="123.0" layoutY="515.0" text="Double Set">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="txtDouble1" layoutX="242.0" layoutY="485.0" />
+                        <TextField fx:id="txtDouble2" layoutX="242.0" layoutY="512.0" />
+                        <TextField fx:id="txtDouble3" layoutX="242.0" layoutY="540.0" />
+                        <TextField fx:id="txtFinalScores" layoutX="415.0" layoutY="481.0" prefHeight="86.0" prefWidth="150.0" promptText="Final team scores" />
+                        <Button layoutX="88.0" layoutY="609.0" mnemonicParsing="false" onAction="#calculateScores" prefHeight="25.0" prefWidth="479.0" text="Calculate and submit scores" />
+                        <Button layoutX="618.0" layoutY="198.0" mnemonicParsing="false" onAction="#openScoreSheet" prefHeight="68.0" prefWidth="136.0" text="Modify Scoresheet" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+
+   </children>
+</AnchorPane>
